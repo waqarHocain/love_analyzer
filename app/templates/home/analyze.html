@@ -1,0 +1,32 @@
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+
+{% block title %} Discover your true love {% endblock %}
+
+{% block body %}
+
+<div class="container jumbotron">
+	<div class="row">
+		<div class="col-md-8 center">
+			<h1>Discover Your Perfect Match</h1>
+
+			<p>So you think what Artificial Intelligence can do? Think again, what it can't do? We use Artificial Intelligence to find your perfect match.</p>
+
+			<p>All you've to do is provide your name, and name of your 3 whom you love. Leave all the rest to us.</p>
+		</div>
+	</div>
+
+
+
+	<div class="row">
+		<div class="col-md-6 center analyze-form">
+			{{ utils.flashed_messages() }}
+
+			{{ wtf.quick_form(form) }}
+			
+		</div>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+{% block body %}
+
+<div class="row">
+	<div class="container">
+		<div class="col-lg-12 text-center">
+			<h1>Hello, {{ current_user.name }}</h1>
+		</div>
+
+		{% if responses %}
+			{% for response in responses %}
+
+				<div class="col-sm-4 col-md-3 response">
+	                <table class="table table-stripped">
+	                    <thead>
+	                        <tr>
+	                            <th>Friend' Name:</th>
+	                            <th>{{ response.name }}</th>
+	                        </tr>
+	                    </thead>
+	                    
+	                    <tbody>
+	                        <tr>
+	                            <th scope="row">Crush 1 Name:</th>
+	                            <td>{{ response.response1 }}</td>
+	                        </tr>
+	                        
+	                        <tr>
+	                            <th scope="row">Crush 2 Name:</th>
+	                            <td>{{ response.response2 }}</td>
+	                        </tr>
+	                        
+	                        <tr>
+	                            <th scope="row">Crush 3 Name:</th>
+	                            <td>{{ response.response3 }}</td>
+	                        </tr>
+	                    </tbody>
+	                </table>
+        		</div>
+
+    		{% endfor %}
+
+			<div class="col-sm-12">
+				<p>Share the following url with your friends & loved ones and know on whom they have a crush.</p>
+            
+	            <code>
+	                {{ request.url_root + current_user.id|string + "/analyzer" }}
+	            </code>
+			</div>
+
+		{% else %}
+			<h2>No one has responded yet, check back later.</h2>
+	        <p>Share the following url with your friends & loved ones and know on whom they have a crush.</p>
+	        
+	        <code>
+	            {{ request.url_root + current_user.id|string + "/analyzer" }}
+	        </code>
+
+		{% endif %}
+
+	</div>
+</div>
+{% endblock %}

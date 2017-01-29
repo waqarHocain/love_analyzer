@@ -1,0 +1,91 @@
+body,
+html
+{
+	min-height: 100%;
+}
+
+body
+{
+	background-image: linear-gradient(to bottom, #0bf, #0ef);
+	font-family: "Open Sans",sans-serif;
+	font-size: 16px;
+}
+
+footer
+{
+	padding-top: 25px;
+}
+
+.center
+{
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/**_-_-_-_-_-_-_-_-_- Overriding BS defaults _-_-_-_-_-_-_-_-_-**/
+.navbar
+{
+	background: #fff;
+}
+.nav
+{
+	border: none;
+}
+
+.navbar-brand,
+.navbar-nav li a
+{
+	/*color: #dd0000;*/
+}
+
+
+.btn,
+.btn-lg
+{
+	border: none;
+	border-radius: 0;
+}
+
+.btn-default
+{
+	background: #337ab7;
+	color: #fff;
+	padding: 10px 25px;
+}
+.btn-default:hover,
+.btn-default:focus
+{
+	background: #286090;
+	color: #fff;
+}
+
+/**_-_-_-_-_-_-_-_-_- Home Styles _-_-_-_-_-_-_-_-_-**/
+.hero
+{
+	font-size: 18px;
+	padding: 10% 10px;
+}
+
+.actions
+{
+	line-height: 1.4;
+	margin-bottom: 25px;
+}
+
+.response
+{
+	margin: 0 15px 15px 0;
+}
+
+.jumbotron
+{
+	background: transparent;
+}
+/**_-_-_-_-_-_-_-_-_- Auth Styles _-_-_-_-_-_-_-_-_-**/
+.register-form form,
+.login-form form,
+.analyze-form form
+{
+	margin: 8% 0;
+}
