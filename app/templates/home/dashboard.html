@@ -52,12 +52,15 @@
 			</div>
 
 		{% else %}
-			<h2>No one has responded yet, check back later.</h2>
-	        <p>Share the following url with your friends & loved ones and know on whom they have a crush.</p>
-	        
-	        <code>
-	            {{ request.url_root + current_user.id|string + "/analyzer" }}
-	        </code>
+			<div class="col-lg-12 padded">
+				<h2>No one has responded yet, check back later.</h2>
+		        <p>Share the following url with your friends & loved ones and know on whom they have a crush.</p>
+		        
+		        <code>
+		            {{ request.url_root + current_user.id|string + "/analyzer" }}
+		        </code>
+					
+			</div>
 
 		{% endif %}
 

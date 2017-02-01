@@ -11,15 +11,17 @@
 			<h1>Want to Know names of your friend's secret crushes?</h1>
 			<h2>Trick them into telling you.</h2>
 
-			<p>All you've to do is:</p>
+			<div class="col-md-5 actions">
+				<p>All you've to do is:</p>
 
-			<ol class="actions">
-				<li><a href="{{ url_for('auth.register') }}">Create </a> your unique link.</li>
-				<li>Share it with your friends.</li>
-				<li>Sit back and relax. We'll keep you updated.</li>
-			</ol>
+				<ol>
+					<li><a href="{{ url_for('auth.register') }}">Create </a> your unique link.</li>
+					<li>Share it with your friends.</li>
+					<li>Sit back and relax. We'll keep you updated.</li>
+				</ol>
 
-			<a href="{{ url_for('auth.register') }}" class="btn btn-lg btn-primary"> Create your free link</a>
+				<a href="{{ url_for('auth.register') }}" class="btn btn-lg btn-primary"> Create your free link</a>
+			</div>
 		</div>
 
 	</div>

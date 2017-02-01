@@ -1,3 +1,14 @@
+/**
+  *				Main Stylesheet for LoveAnalyzer
+  *					<waqarmaxtan@gmail.com>
+  *						~~~ Colors ~~~
+  *					Dark:				#34495e;	// base color
+  *					Pink: 				#ff0b8d;	// brand color
+  *					Orange: 			#ffa64d;
+  *
+  */
+
+
 body,
 html
 {
@@ -6,14 +17,40 @@ html
 
 body
 {
-	background-image: linear-gradient(to bottom, #0bf, #0ef);
-	font-family: "Open Sans",sans-serif;
+	background-image: linear-gradient(90deg, #ff0b8d, #ffa64d);
+	color: #fff;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-weight: 700;
+}
+
+a
+{
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+code
+{
+	background: #fff;
+	padding: 8px;
+	font-family: monospace;
 	font-size: 16px;
 }
 
 footer
 {
 	padding-top: 25px;
+}
+footer a:hover,
+footer a:focus
+{
+	color: rgba(255,255,255, 0.75);
 }
 
 .center
@@ -33,50 +70,127 @@ footer
 	border: none;
 }
 
-.navbar-brand,
-.navbar-nav li a
+.alert-info
 {
-	/*color: #dd0000;*/
+	background: transparent;
+	border: 2px solid rgba(255, 255, 255, 0.75);
+	color: #fff;
 }
 
-
-.btn,
-.btn-lg
+.btn
 {
-	border: none;
-	border-radius: 0;
+	border: 2px solid rgba(255, 44, 141, 0.5);
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.btn-primary
+{
+	background: transparent;
+	color: #ff0b8d;
+}
+.btn-primary:hover,
+.btn-primary:focus
+{
+	background: transparent;
+	border-color: #ff0b8d;
+	color: #ff0b8d;
+}
+.btn-primary:active
+{
+	color: #ff0b8d !important;
+	background: #fff !important;
+	border-color: #ff0b8d !important;
 }
 
 .btn-default
 {
-	background: #337ab7;
+	background: transparent;
 	color: #fff;
+	border: 1px solid #fff;
 	padding: 10px 25px;
 }
 .btn-default:hover,
 .btn-default:focus
 {
-	background: #286090;
-	color: #fff;
+	background: #fff;
+	border-color: transparent;
+	color: #ff0b8d;
 }
 
-/**_-_-_-_-_-_-_-_-_- Home Styles _-_-_-_-_-_-_-_-_-**/
+/**_-_-_-_-_-_-_-_-_- Homepage Styles _-_-_-_-_-_-_-_-_-**/
+
+/** ----- Nav Styles --------- **/
+.navbar-brand,
+.navbar-nav li a
+{
+	color: #ff0b8d;
+	font-weight: bold;
+}
+
+.navbar-brand
+{
+	font-size: 20px;
+}
+.navbar-brand strong
+{
+	color: #ffa64d;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus
+{
+	color: #ffa64d;
+}
+.navbar-brand:hover strong,
+.navbar-brand:focus strong
+{
+	color: #ff0b8d;
+}
+
+.navbar-nav li a
+{
+	font-size: 14px;
+}
+/*.navbar-nav li a:hover,
+.navbar-nav li a:focus
+{
+
+}*/
+
+/** ----- Intro Styles --------- **/
 .hero
 {
 	font-size: 18px;
-	padding: 10% 10px;
+	padding: 80px 10px;
 }
 
 .actions
 {
+	background: #fff;
+	color: #34495e;
 	line-height: 1.4;
-	margin-bottom: 25px;
+	margin-top: 25px;
+	padding: 25px;
+}
+
+.actions .btn-primary
+{
+	margin-top: 25px;
+}
+
+/**_-_-_-_-_-_-_-_-_- Dashboard Styles _-_-_-_-_-_-_-_-_-**/
+.padded
+{
+	padding: 10% 10px;
+	text-align: center;
 }
 
 .response
 {
 	margin: 0 15px 15px 0;
 }
+
 
 .jumbotron
 {
